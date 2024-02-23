@@ -1,0 +1,205 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+main {
+  background-color: rgb(12, 12, 12);
+  width: 95%;
+  height: 50vh;
+  margin-top: 20%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  box-shadow: 4px 4px 4px rgb(170, 56, 3), -2px -2px 4px rgb(170, 56, 3);
+}
+#time {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(to top, rgb(145, 148, 2), rgb(170, 56, 3));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.hour,
+.mins {
+  font-size: 6rem;
+  font-weight: 600;
+}
+.dots {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  gap: 20px;
+}
+.dotLower {
+  padding-top: 40px;
+}
+.firstDot {
+  width: 8px;
+  height: 8px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(148, 90, 2),
+    rgb(170, 56, 3)
+  );
+}
+.secondDot {
+  width: 6px;
+  height: 6px;
+  background-image: linear-gradient(to top, rgb(148, 90, 2), rgb(170, 56, 3));
+}
+.blinkDots {
+  animation: blinkDots linear 1s alternate infinite;
+}
+
+@keyframes blinkDots {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.second-Indicator {
+  display: flex;
+  flex-flow: column;
+}
+.indicate-Am-Pm {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+#AM,
+#PM {
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(
+    to top,
+    rgba(2, 148, 92, 0.322),
+    rgba(2, 148, 92, 0.849)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.second {
+  font-size: 4rem;
+  font-weight: 500;
+}
+.days {
+  display: flex;
+  flex-flow: column;
+}
+.days-in-week,
+.year-month {
+  display: flex;
+  gap: 13px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-size: 17px;
+  text-transform: capitalize;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(
+    to top,
+    rgba(2, 148, 92, 0.39),
+    rgba(170, 56, 3, 0.39)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.year-month {
+  justify-content: center;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: rgba(0, 255, 179, 0.877);
+}
+
+.activeDay {
+  color: rgba(0, 255, 179, 0.877) !important;
+}
+
+@media (max-width: 559px) {
+  #time {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .firstDot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .second,
+  .secondDot {
+    display: none;
+  }
+  #AM,
+  #PM {
+    font-size: 15px;
+  }
+  .dotLower {
+    padding-top: 20px;
+  }
+  .indicate-Am-Pm {
+    gap: 10px;
+  }
+
+  main {
+    width: 100%;
+  }
+  .days-in-week {
+    align-items: center;
+    flex-flow: column;
+    background-image: linear-gradient(
+      to top,
+      rgba(2, 148, 92, 0.39),
+      rgba(1, 110, 69, 0.39)
+    );
+  }
+  .hour,
+  .mins,
+  .second {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 279px) {
+  .indicate-Am-Pm {
+    flex-flow: column;
+  }
+}
+@media (min-width: 680px) {
+  main {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    width: 50%;
+    margin-top: 5%;
+  }
+}

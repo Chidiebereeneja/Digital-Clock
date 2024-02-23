@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital clock</title>
+    <link rel="stylesheet" href="digital.css" />
+    <script src="digital.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section id="time">
+        <span class="hour">12</span>
+        <div class="dots">
+          <span class="firstDot blinks"></span>
+          <span class="firstDot blinks"></span>
+        </div>
+        <span class="mins">45</span>
+        <div class="dots dotLower">
+          <span class="secondDot blinks"></span>
+          <span class="secondDot blinks"></span>
+        </div>
+        <div class="second-Indicator">
+          <div class="indicate-Am-Pm">
+            <span class="am" id="AM">AM</span>
+            <span class="pm" id="PM">PM</span>
+          </div>
+          <span class="second">30</span>
+        </div>
+      </section>
+      <section id="days">
+        <div class="days-in-week">
+          <div>
+            <span class="sun">sun</span>
+            <span class="mon">mon</span>
+            <span class="tue">tue</span>
+            <span class="wed">wed</span>
+          </div>
+          <div>
+            <span class="thur">thur</span>
+            <span class="fri">fri</span>
+            <span class="sat">sat</span>
+          </div>
+        </div>
+        <div class="year-month">
+          <span class="displayYear"> jan 1 2020</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
